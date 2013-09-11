@@ -1,0 +1,177 @@
+﻿@model MvcApplicationAdvogados.CLIENTES
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>CLIENTES</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumInterno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumInterno)
+            @Html.ValidationMessageFor(model => model.NumInterno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIF)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIF)
+            @Html.ValidationMessageFor(model => model.NIF)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TipoCliente)
+            @Html.ValidationMessageFor(model => model.TipoCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Morada)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Morada)
+            @Html.ValidationMessageFor(model => model.Morada)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CDP4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CDP4)
+            @Html.ValidationMessageFor(model => model.CDP4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CDP3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CDP3)
+            @Html.ValidationMessageFor(model => model.CDP3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Concelho)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Concelho)
+            @Html.ValidationMessageFor(model => model.Concelho)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadoCivil)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EstadoCivil)
+            @Html.ValidationMessageFor(model => model.EstadoCivil)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeConjuge)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeConjuge)
+            @Html.ValidationMessageFor(model => model.NomeConjuge)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIFConjuge)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIFConjuge)
+            @Html.ValidationMessageFor(model => model.NIFConjuge)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumSocios)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumSocios)
+            @Html.ValidationMessageFor(model => model.NumSocios)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeSocio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeSocio)
+            @Html.ValidationMessageFor(model => model.NomeSocio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIFSocio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIFSocio)
+            @Html.ValidationMessageFor(model => model.NIFSocio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadoCivilSocio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EstadoCivilSocio)
+            @Html.ValidationMessageFor(model => model.EstadoCivilSocio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeConjugeSocio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeConjugeSocio)
+            @Html.ValidationMessageFor(model => model.NomeConjugeSocio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIFConjugeSocio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIFConjugeSocio)
+            @Html.ValidationMessageFor(model => model.NIFConjugeSocio)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

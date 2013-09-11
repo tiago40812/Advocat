@@ -1,0 +1,75 @@
+﻿@model MvcApplicationAdvogados.PROCESSOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PROCESSOS</legend>
+
+    <div class="display-label">NumProcesso</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumProcesso)
+    </div>
+
+    <div class="display-label">TIPO_DE_PROCESSO</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TIPO_DE_PROCESSO.Descricao)
+    </div>
+
+    <div class="display-label">Assunto</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Assunto)
+    </div>
+
+    <div class="display-label">NomeParteContraria</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeParteContraria)
+    </div>
+
+    <div class="display-label">NIFParteContraria</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIFParteContraria)
+    </div>
+
+    <div class="display-label">EstadoCivilParteContraria</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivilParteContraria)
+    </div>
+
+    <div class="display-label">NomeConjugeParteContraria</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeConjugeParteContraria)
+    </div>
+
+    <div class="display-label">NIFConjugeParteContraria</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIFConjugeParteContraria)
+    </div>
+
+    <div class="display-label">Tribunal</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tribunal)
+    </div>
+
+    <div class="display-label">Seccao</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Seccao)
+    </div>
+
+    <div class="display-label">Juizo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Juizo)
+    </div>
+
+    <div class="display-label">NumProcessoOficial</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumProcessoOficial)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

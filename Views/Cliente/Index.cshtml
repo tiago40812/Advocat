@@ -1,0 +1,141 @@
+﻿@model IEnumerable<MvcApplicationAdvogados.CLIENTES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            NumInterno
+        </th>
+        <th>
+            NIF
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            TipoCliente
+        </th>
+        <th>
+            Telefone
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Morada
+        </th>
+        <th>
+            CDP4
+        </th>
+        <th>
+            CDP3
+        </th>
+        <th>
+            Concelho
+        </th>
+        <th>
+            EstadoCivil
+        </th>
+        <th>
+            NomeConjuge
+        </th>
+        <th>
+            NIFConjuge
+        </th>
+        <th>
+            NumSocios
+        </th>
+        <th>
+            NomeSocio
+        </th>
+        <th>
+            NIFSocio
+        </th>
+        <th>
+            EstadoCivilSocio
+        </th>
+        <th>
+            NomeConjugeSocio
+        </th>
+        <th>
+            NIFConjugeSocio
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumInterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Morada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CDP4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CDP3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Concelho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoCivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeConjuge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIFConjuge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumSocios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeSocio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIFSocio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoCivilSocio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeConjugeSocio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIFConjugeSocio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

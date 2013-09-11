@@ -1,0 +1,121 @@
+﻿@model MvcApplicationAdvogados.PROCESSOS
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>PROCESSOS</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumProcesso)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumProcesso)
+            @Html.ValidationMessageFor(model => model.NumProcesso)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoProcesso, "TIPO_DE_PROCESSO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoProcesso", String.Empty)
+            @Html.ValidationMessageFor(model => model.TipoProcesso)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Assunto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Assunto)
+            @Html.ValidationMessageFor(model => model.Assunto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeParteContraria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeParteContraria)
+            @Html.ValidationMessageFor(model => model.NomeParteContraria)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIFParteContraria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIFParteContraria)
+            @Html.ValidationMessageFor(model => model.NIFParteContraria)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadoCivilParteContraria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EstadoCivilParteContraria)
+            @Html.ValidationMessageFor(model => model.EstadoCivilParteContraria)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeConjugeParteContraria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeConjugeParteContraria)
+            @Html.ValidationMessageFor(model => model.NomeConjugeParteContraria)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NIFConjugeParteContraria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NIFConjugeParteContraria)
+            @Html.ValidationMessageFor(model => model.NIFConjugeParteContraria)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tribunal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tribunal)
+            @Html.ValidationMessageFor(model => model.Tribunal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Seccao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Seccao)
+            @Html.ValidationMessageFor(model => model.Seccao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Juizo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Juizo)
+            @Html.ValidationMessageFor(model => model.Juizo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumProcessoOficial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumProcessoOficial)
+            @Html.ValidationMessageFor(model => model.NumProcessoOficial)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MvcApplicationAdvogados.PROCESSOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            NumProcesso
+        </th>
+        <th>
+            TIPO_DE_PROCESSO
+        </th>
+        <th>
+            Assunto
+        </th>
+        <th>
+            NomeParteContraria
+        </th>
+        <th>
+            NIFParteContraria
+        </th>
+        <th>
+            EstadoCivilParteContraria
+        </th>
+        <th>
+            NomeConjugeParteContraria
+        </th>
+        <th>
+            NIFConjugeParteContraria
+        </th>
+        <th>
+            Tribunal
+        </th>
+        <th>
+            Seccao
+        </th>
+        <th>
+            Juizo
+        </th>
+        <th>
+            NumProcessoOficial
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumProcesso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_DE_PROCESSO.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assunto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeParteContraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIFParteContraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoCivilParteContraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeConjugeParteContraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIFConjugeParteContraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tribunal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seccao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Juizo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumProcessoOficial)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

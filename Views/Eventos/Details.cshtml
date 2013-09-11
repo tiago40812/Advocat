@@ -1,0 +1,50 @@
+﻿@model MvcApplicationAdvogados.EVENTOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EVENTOS</legend>
+
+    <div class="display-label">PROCESSOS</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROCESSOS.Assunto)
+    </div>
+
+    <div class="display-label">Data</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Data)
+    </div>
+
+    <div class="display-label">ADVOGADOS</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ADVOGADOS.Nome)
+    </div>
+
+    <div class="display-label">HorasGastas</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HorasGastas)
+    </div>
+
+    <div class="display-label">Assunto</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Assunto)
+    </div>
+
+    <div class="display-label">Despesa</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Despesa)
+    </div>
+
+    <div class="display-label">DataRetorno</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataRetorno)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

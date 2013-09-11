@@ -1,0 +1,110 @@
+﻿@model MvcApplicationAdvogados.CLIENTES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CLIENTES</legend>
+
+    <div class="display-label">NumInterno</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumInterno)
+    </div>
+
+    <div class="display-label">NIF</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIF)
+    </div>
+
+    <div class="display-label">Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">TipoCliente</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoCliente)
+    </div>
+
+    <div class="display-label">Telefone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefone)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Morada</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Morada)
+    </div>
+
+    <div class="display-label">CDP4</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CDP4)
+    </div>
+
+    <div class="display-label">CDP3</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CDP3)
+    </div>
+
+    <div class="display-label">Concelho</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Concelho)
+    </div>
+
+    <div class="display-label">EstadoCivil</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivil)
+    </div>
+
+    <div class="display-label">NomeConjuge</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeConjuge)
+    </div>
+
+    <div class="display-label">NIFConjuge</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIFConjuge)
+    </div>
+
+    <div class="display-label">NumSocios</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumSocios)
+    </div>
+
+    <div class="display-label">NomeSocio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeSocio)
+    </div>
+
+    <div class="display-label">NIFSocio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIFSocio)
+    </div>
+
+    <div class="display-label">EstadoCivilSocio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivilSocio)
+    </div>
+
+    <div class="display-label">NomeConjugeSocio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeConjugeSocio)
+    </div>
+
+    <div class="display-label">NIFConjugeSocio</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NIFConjugeSocio)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
